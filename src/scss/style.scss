@@ -1,0 +1,324 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+    @font-face {
+        font-family: $font_name;
+        font-display: swap;
+        src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+        font-weight: #{$weight};
+        font-style: #{$style};
+    }
+}
+
+@import "./fonts.scss";
+@import './normalize.scss';
+@import "./header.scss";
+@import "./mixins.scss";
+
+// 🕷 
+
+body{
+    font-family: "FuturaPT",sans-serif;
+    &::-webkit-scrollbar { // убрал скролл в Chrome
+        width: 0;
+    }
+    -ms-overflow-style: none; // убрал скролл на IE
+}
+
+.blue_btn {
+    @include button($blue,#fff,16px)
+}
+
+// First screen
+.intro{
+    position: relative;
+    max-height: calc(90vh - 48px);
+
+    &__slider{
+    // position: relative;
+    max-height: calc(90vh - 48px);
+        
+        height: 100%;
+        .intro__slide{
+            min-height: calc(90vh - 48px);
+            img{
+                width: 100%;
+            }
+        }
+    }
+
+    .offer{
+        position: absolute;
+        top:0;
+        left: 0;
+        bottom: 0;
+
+        z-index: 100;
+        width: 50vw;
+        max-height: calc(90vh - 48px);
+
+        background: rgba(45, 42, 38, .6);
+
+        display: flex;
+        align-items: center;
+        // justify-content: center;
+        padding-left: 57px;
+        padding-right: 100px;
+
+        .intro__pagination{
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            max-width: 40px;
+
+            .swiper-pagination-bullet{
+                width: 40px;
+                height: 40px;
+                // padding: 11px 17px 11px 17px;
+                color: white;
+                font-family: "PenguinBold", sans-serif;
+                font-size: 24px;
+                text-align: center;
+                padding: 9px 0px;
+    
+                position: relative;
+    
+                transition: all .2s linear;
+                background: transparent;
+                margin-bottom: 34px !important;
+                opacity: 1;
+                &::before{
+                    content: " ";
+                    transition: transform .6s linear;
+                    border-radius: 50%;
+                }
+                outline: none;
+            }
+    
+            .swiper-pagination-bullet-active{
+                &::before{
+                    content: " ";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 100;
+                    width: 100%;
+                    height: 100%;
+                    border: 1px solid white;
+                    border-bottom-color: rgba(255, 255, 255, .2);
+                    transform: rotate(405deg);  
+                }
+            }
+        }
+
+        .offer__info{
+            color: #fff;
+            margin-left: 60px;
+
+            .info__suptitle{
+                font-size: 46px;
+                margin-bottom: 18px;
+                line-height: 46px;
+                font-weight: normal;
+            }
+            .info__title{
+                font-size: 64px;
+                line-height: 82px;
+                margin-bottom: 33px;
+            }
+            .info__text{
+                margin-bottom: 53px;
+                font-weight: 400;
+                font-size: 24px;
+            }
+
+            .info__btn{
+                @include button(#fff, #2D2A26, 18px);
+            }
+        }
+    }
+
+    .arrow_down{
+        position: absolute;
+        bottom: 65px;
+        left: 50%;
+        transform: translate(-50%,0%);
+        z-index: 100;
+    }
+}
+
+.welcome{
+    position: relative;
+    
+    min-height: calc(95vh - 48px);
+
+    background: $blue;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .welcome__main {
+        flex: 0 1 32%;
+        padding-left: 165px;
+        .main__img {
+            max-width: 538px;
+            margin-bottom: 46px;
+        }
+
+        .main__title {
+            font-size: 48px;
+            line-height: 62px;
+            font-weight: bold;
+            margin-bottom: 17px;
+        }
+
+        .main__text {
+            font-size: 20px;
+            line-height: 26px;
+            color: rgba(255, 255, 255, .8)
+            
+        }
+    }
+
+    .welcome__services{
+        flex: 0 1 54%;
+        display: flex;
+        flex-wrap: wrap;
+        padding-right: 70px;
+        padding-top: 70px;
+        padding-bottom: 80px;
+
+        margin-left: auto;
+
+        .services__item {    
+            flex: 0 1 33.333%;
+            margin-bottom: 32px;
+            padding-left: 28px;
+            .item__img {
+                margin-bottom: 14px;
+            }
+
+            .item__title{
+                font-size: 23px;
+                line-height: 31px;
+                font-weight: 600;
+                margin-bottom: 4px;
+            }
+
+            .item__text{
+                font-size: 16px;
+                line-height: 21px;
+                font-weight: 400;
+                color: rgba(255, 255, 255, .8)
+            }
+        }
+    }   
+
+    .waves{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: url('../img/welcome/waves.png');
+        margin-top: 10px;
+        height: 103px;
+        opacity: .3;
+    }
+}
+
+.restaurant{
+    padding: 169px 0px 135px 80px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__info {
+        flex: 0 1 43.5%;
+        padding-left: 80px;
+        .info__waves {
+            max-width: 364px;
+            width: 100%;
+            height: 44px;
+            margin-bottom: 10px;
+        }
+
+        .info__title{
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 62px;
+            color: #2D2A26;
+            margin-bottom: 28px;
+        }
+        .info__text{
+            font-size: 20px;
+            line-height: 26px;
+            color: rgba(45, 42, 38, .8);
+            font-weight: 500;
+            margin-bottom: 32px;
+        }
+
+        .info__btn{
+            display: block;
+            @include button(#042454,#fff,18px);
+            margin-bottom: 16px;
+
+            min-width: 260px;
+        }
+    }
+
+
+    &__slider {
+        flex: 0 1 50%;
+        max-width: 50vw;
+
+        .restaurant__slide{
+            width: 100%;
+        }
+
+        .restaurant__bullets{
+            margin-top: 24px;
+
+            .swiper-pagination-bullet{
+                width: 9px;
+                height: 9px;
+    
+                position: relative;
+    
+                transition: all .2s linear;
+                background: #2D2A26;
+                margin-right: 64px !important;
+                opacity: 1;
+
+                &::before{
+                    content: " ";
+                    border-radius: 50%;
+                    opacity: 0;
+                    transition: opacity .2s linear;
+                }
+                outline: none;
+            }
+    
+            .swiper-pagination-bullet-active{
+                &::before{
+                    content: " ";
+                    opacity: 1;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%) rotate(405deg);  
+
+                    z-index: 100;
+                    width: 29px;
+                    height: 29px;
+                    
+                    border: 1px solid #2D2A26;
+                    border-bottom-color: rgba(45, 42, 38, .2);
+
+                
+                }
+            }
+        }
+    }
+
+}

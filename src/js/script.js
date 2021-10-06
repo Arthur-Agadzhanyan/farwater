@@ -1,0 +1,38 @@
+@@include('webpTest.js');
+@@include('swiper.js');
+
+
+const introSlider = new Swiper(".intro__slider",{
+    pagination:{
+        el:".intro__pagination",
+        clickable: true,
+        renderBullet: function(index,className){
+            return `<span class="${className}">${index+1}</span>`
+        }
+    },
+    loop: true,
+
+    autoplay:{
+        delay: 5000,
+    },
+    speed: 1000,
+    // grabCursor: true,
+    slidesPerView: 1,
+    
+})
+
+const restaurantSlider = new Swiper(".restaurant-slider",{
+    pagination:{
+        el:".restaurant__bullets",
+        clickable: true,
+    },
+    loop: true,
+
+    autoplay:{
+        delay: 5000,
+    },
+    speed: 1000,
+    // grabCursor: true,
+    slidesPerView: 1,
+    
+})

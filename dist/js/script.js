@@ -52,7 +52,39 @@ const introSlider = new Swiper(".intro__slider",{
 
 const restaurantSlider = new Swiper(".restaurant-slider",{
     pagination:{
-        el:".restaurant__bullets",
+        el:".restaurant-bullets",
+        clickable: true,
+    },
+    loop: true,
+
+    autoplay:{
+        delay: 5000,
+    },
+    speed: 1000,
+    // grabCursor: true,
+    slidesPerView: 1,
+    
+})
+
+const eventsSlider = new Swiper(".events-slider",{
+    pagination:{
+        el:".events-bullets",
+        clickable: true,
+    },
+    loop: true,
+
+    autoplay:{
+        delay: 5000,
+    },
+    speed: 1000,
+    // grabCursor: true,
+    slidesPerView: 1,
+    
+})
+
+const residenceSlider = new Swiper(".residence-slider",{
+    pagination:{
+        el:".residence-bullets",
         clickable: true,
     },
     loop: true,

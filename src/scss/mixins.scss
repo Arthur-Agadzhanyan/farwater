@@ -19,12 +19,12 @@
 
 @mixin slider(){
     .slider__slide{
-        width: 100%;
+        width: 100% !important;
     }
 
     .slider__bullets{
         margin-top: 24px;
-        margin-left: -5px;
+        margin-left: -7.5px;
 
         .swiper-pagination-bullet{
             width: 9px;
@@ -65,5 +65,108 @@
             
             }
         }
+    }
+}
+
+@mixin block_info() {
+
+
+    .info__waves{
+        max-width: 627px;
+        height: 9px;
+    }
+
+    .info__title {
+        color: #1E0E00;
+        font-size: 48px;
+        line-height: 62px;
+        margin-bottom: 24px;
+        margin-top: 15px;
+    }
+
+    .info__text {
+        color: #1E0E00;
+        font-size: 20px;
+        line-height: 26px;
+        margin-bottom: 24px;
+        font-weight: 500;
+    }
+
+    .info__subtitle {
+        position: relative;
+        font-size: 24px;
+        line-height: 31px;
+        font-weight: 500;
+        color: #2D2A26;
+        
+        &::after{
+            content: " ";
+            position: absolute;
+            top: 50%;
+            z-index: 10;
+            width: 60px;
+            height: 1px;
+            margin-top: 2px;
+            margin-left: 10px;
+            border-top: 1px solid rgba(4, 36, 84, .2);
+        }
+    } 
+
+    .info__events {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 25px;
+
+        width: 80%;
+
+
+        .events__item{
+            margin-top: 16px;
+            flex: 0 1 50%;
+            display: flex;
+            align-items: center;
+
+            // .item__img{
+
+            // }
+
+            .item__text{
+                margin-left: 16px;
+                font-size: 16px;
+                font-weight: 500;
+                color: #2D2A26;
+                line-height: 100%;
+            }
+        }
+    }
+    .info__description{
+        margin-bottom: 32px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .description__item{
+            margin-right: 32px;
+            margin-top: 24px;
+
+            .item__text{
+                color: #2D2A26;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 100%;
+            }
+            .item__title{
+                font-size: 20px;
+                line-height: 100%;
+                font-weight: 500;
+                color: #042454;
+            }
+        }
+    }
+
+    .info__btn{
+        @include button(#042454,#fff,18px);
     }
 }

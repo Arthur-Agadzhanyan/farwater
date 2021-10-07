@@ -97,3 +97,19 @@ const residenceSlider = new Swiper(".residence-slider",{
     slidesPerView: 1,
     
 })
+
+const perksSlider = new Swiper(".perks-slider",{
+    pagination:{
+        el:".perks-bullets",
+        clickable: true,
+    },
+    loop: true,
+
+    autoplay:{
+        delay: 5000,
+    },
+    speed: 1000,
+    // grabCursor: true,
+    slidesPerView: 1,
+    
+})

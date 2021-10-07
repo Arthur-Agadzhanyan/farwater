@@ -608,5 +608,151 @@ body{
             
         }  
     }
+    .bg_imgs{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+
+        display: flex;
+        img{
+            max-height: 220px;
+        }
+    }
+}
+
+.instagram{
+    position: relative;
+    padding: 90px 0px 144px 0px;
+    max-width: 100%;
+    overflow-x: hidden;
+
+    background: #ECECEC;
+
+    &__info{
+        padding-right: 160px;
+        margin-bottom: 52px;
+
+        @include block_info();
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
     
+        .info__link{
+            text-decoration: none;
+            color: #042454;
+
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 41px;
+
+            margin-right: 6px;
+            margin-bottom: 5px;
+        }   
+    
+        .link__waves{
+            display: block;
+            
+        }
+    }
+
+    &__slider{
+        position: relative;
+        z-index: 300;
+
+        @include slider();
+
+        .instagram__slide{
+            .slide__content{
+                
+                background: #fff;
+                padding: 17px;
+                width: 95%;
+                .content__img{
+                    margin-bottom: 20px;
+                    img{
+                        max-width: 100%;
+    
+                    }
+                }
+                .content__icons{
+                    .icons__item{
+                        margin-right: 18px;
+                        cursor: pointer;
+                    }
+                    .active_icon{
+                        path{
+                            fill: #2D2A26;
+                        }
+                    }
+                }
+
+                .content__likes{
+                    font-weight: 450;
+                    font-size: 20px;
+                    line-height: 26px;
+                    margin-top: 11px;
+                }
+            }
+            
+        }
+
+        .slider__bullets{
+            max-width: 100%;
+            margin-top: 38px;
+            margin-left: 75px;
+        }
+    }
+}
+
+.how_can_find{
+    position: relative;
+    display: flex;
+
+    .left_line, .middle_line, .right_line{
+        background: #042454;
+        opacity: .1;
+    }  
+
+    &__info{
+        flex: 0 1 50%;
+
+        .info__content{
+            padding: 40px 30px 94px 160px;
+
+            .info__title{
+                color: #1E0E00;
+                font-size: 48px;
+                line-height: 62px;
+                margin-bottom: 17px;
+                margin-top: 60px;
+            }
+
+            .info__location{
+                display: flex;
+
+                .location__icon{
+                    margin-top: 9px;
+                }
+
+                .location__text{
+                    margin-left: 18px;
+                    font-weight: 600;
+                    font-size: 32px;
+                    line-height: 41px;
+                }
+            }
+        }
+
+        .info__img{
+            width: 100%;
+        }
+    }
+
+    &__img{
+        flex: 0 1 50%;
+
+        background: url("../img/how_find/map.png") no-repeat center;
+    }
 }

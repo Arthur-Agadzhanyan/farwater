@@ -113,3 +113,19 @@ const perksSlider = new Swiper(".perks-slider",{
     slidesPerView: 1,
     
 })
+
+const instagramSlider = new Swiper(".instagram-slider",{
+    pagination:{
+        el:".instagram-bullets",
+        clickable: true,
+    },
+
+    autoplay:{
+        delay: 5000,
+    },
+    speed: 1000,
+    // grabCursor: true,
+    slidesPerView: 5.3,
+    freeMode: true
+    
+})

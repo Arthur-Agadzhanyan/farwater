@@ -677,17 +677,21 @@ body::-webkit-scrollbar {
   opacity: 0.2;
 }
 
-.no-webp .intro .intro_1 {
-  background: url("../img/intro/1.png") center no-repeat; }
+.intro .intro_1 {
+  background: url("../img/intro/1.webp") center no-repeat;
+}
 
-.no-webp .intro .intro_2 {
-  background: url("../img/intro/3.png") center no-repeat; }
+.intro .intro_2 {
+  background: url("../img/intro/3.webp") center no-repeat;
+}
 
-.no-webp .intro .intro_3 {
-  background: url("../img/intro/5.png") center no-repeat; }
+.intro .intro_3 {
+  background: url("../img/intro/5.webp") center no-repeat;
+}
 
-.no-webp .intro .intro_4 {
-  background: url("../img/intro/4.png") center no-repeat; }
+.intro .intro_4 {
+  background: url("../img/intro/4.webp") center no-repeat;
+}
 
 .intro__slider {
   max-height: calc(90vh - 48px);
@@ -1011,7 +1015,7 @@ body::-webkit-scrollbar {
 }
 
 .restaurant__slider .slider__slide {
-  width: 100% !important;
+  width: 50vw !important;
 }
 
 .restaurant__slider .slider__bullets {
@@ -1055,6 +1059,11 @@ body::-webkit-scrollbar {
   height: 29px;
   border: 1px solid #2D2A26;
   border-bottom-color: rgba(45, 42, 38, 0.2);
+}
+
+.restaurant__slider img {
+  width: 100%;
+  max-height: 100%;
 }
 
 .events {
@@ -1220,7 +1229,7 @@ body::-webkit-scrollbar {
 }
 
 .events__slider .slider__slide {
-  width: 100% !important;
+  width: 50vw !important;
 }
 
 .events__slider .slider__bullets {
@@ -1264,6 +1273,11 @@ body::-webkit-scrollbar {
   height: 29px;
   border: 1px solid #2D2A26;
   border-bottom-color: rgba(45, 42, 38, 0.2);
+}
+
+.events__slider img {
+  width: 100%;
+  max-height: 100%;
 }
 
 .events .bg_imgs {
@@ -1481,7 +1495,7 @@ body::-webkit-scrollbar {
 }
 
 .residence__slider .slider__slide {
-  width: 100% !important;
+  width: 50vw !important;
 }
 
 .residence__slider .slider__bullets {
@@ -1752,7 +1766,7 @@ body::-webkit-scrollbar {
 }
 
 .perks__slider .slider__slide {
-  width: 100% !important;
+  width: 50vw !important;
 }
 
 .perks__slider .slider__bullets {
@@ -2088,7 +2102,7 @@ body::-webkit-scrollbar {
 }
 
 .instagram__slider .slider__slide {
-  width: 100% !important;
+  width: 50vw !important;
 }
 
 .instagram__slider .slider__bullets {
@@ -2231,14 +2245,6 @@ body::-webkit-scrollbar {
       -ms-flex: 0 1 50%;
           flex: 0 1 50%;
 }
-
-.webp .intro .intro_1 { background: url(../img/intro/1.webp) center no-repeat; }
-
-.webp .intro .intro_2 { background: url(../img/intro/3.webp) center no-repeat; }
-
-.webp .intro .intro_3 { background: url(../img/intro/5.webp) center no-repeat; }
-
-.webp .intro .intro_4 { background: url(../img/intro/4.webp) center no-repeat; }
 
 .webp .welcome .waves { background: url(../img/welcome/waves.webp); }
 

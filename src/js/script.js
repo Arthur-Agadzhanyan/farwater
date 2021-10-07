@@ -34,6 +34,7 @@ const restaurantSlider = new Swiper(".restaurant-slider",{
     speed: 1000,
     // grabCursor: true,
     slidesPerView: 1,
+    autoHeight: true
     
 })
 

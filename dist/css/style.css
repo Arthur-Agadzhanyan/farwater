@@ -512,6 +512,101 @@ template {
   font-size: 16px;
 }
 
+.footer {
+  padding: 25px 80px 30px 80px;
+  -webkit-box-shadow: 0px -4px 24px rgba(4, 36, 83, 0.16);
+          box-shadow: 0px -4px 24px rgba(4, 36, 83, 0.16);
+}
+
+.footer .top__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 26px;
+  border-bottom: 1px solid #EFF3F3;
+}
+
+.footer .top__footer .footer__logo {
+  width: 260px;
+}
+
+.footer .top__footer .top__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer .top__footer .top__nav a {
+  text-decoration: none;
+  margin: 0px 40px;
+  font-weight: 450;
+  font-size: 18px;
+  line-height: 23px;
+  color: #2D2A26;
+  padding-bottom: 3px;
+  -webkit-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  transition: all .2s linear;
+  border-bottom: 1px solid #fff;
+}
+
+.footer .top__footer .top__nav a:hover {
+  border-bottom: 1px solid #2D2A26;
+}
+
+.footer .top__footer .top__contacts {
+  text-align: right;
+}
+
+.footer .top__footer .top__contacts .contacts__phone {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+  color: #2D2A26;
+}
+
+.footer .top__footer .top__contacts .contacts__email {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  color: #2D2A26;
+  margin-top: 4px;
+}
+
+.footer .bottom__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 20px;
+}
+
+.footer .bottom__footer .bottom__text {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.footer .bottom__footer .bottom__text span {
+  margin-right: 19px;
+  color: #AAAFB4;
+}
+
+.footer .bottom__footer .bottom__icons svg {
+  margin-right: 30px;
+}
+
 body {
   font-family: "FuturaPT",sans-serif;
   -ms-overflow-style: none;

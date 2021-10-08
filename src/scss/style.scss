@@ -25,7 +25,20 @@ body{
 }
 
 .blue_btn {
-    @include button($blue,#fff,16px)
+    @include button($blue,#fff,16px);
+
+    @media screen and (max-width: 1200px) {
+        padding: 11px 22px;
+        font-size: 15px;
+    }
+}
+
+.ds{
+    display: block;
+}
+
+.mb{
+    display: none;
 }
 
 .left_line{
@@ -40,7 +53,6 @@ body{
 }
 
 .middle_line{
-
     position: absolute;
     top:0;
     bottom: 0;
@@ -147,6 +159,8 @@ body{
                     border-radius: 50%;
                 }
                 outline: none;
+
+                
             }
     
             .swiper-pagination-bullet-active{
@@ -292,7 +306,7 @@ body{
 
 .restaurant{
     position: relative;
-    padding: 169px 0px 135px 80px;
+    padding: 169px 80px 135px 0px;
 
     display: flex;
     justify-content: space-between;
@@ -305,12 +319,16 @@ body{
 
     &__info {
         flex: 0 1 43.5%;
-        padding-left: 80px;
+        padding-right: 80px;
         .info__waves {
             max-width: 364px;
             width: 100%;
             height: 44px;
             margin-bottom: 10px;
+
+            @media screen and (max-width: 1600px) {
+                max-width: 300px;
+            }
         }
 
         .info__title{
@@ -319,6 +337,11 @@ body{
             line-height: 62px;
             color: #2D2A26;
             margin-bottom: 28px;
+
+            @media screen and (max-width: 1600px) {
+                font-size: 40px;
+                margin-bottom: 22px;
+            }
         }
         .info__text{
             font-size: 20px;
@@ -326,6 +349,10 @@ body{
             color: rgba(45, 42, 38, .8);
             font-weight: 500;
             margin-bottom: 32px;
+
+            @media screen and (max-width: 1600px) {
+                font-size: 19px;
+            }
         }
 
         .info__btn{
@@ -347,6 +374,10 @@ body{
         img{
             width: 100%;
             max-height: 100%;
+        }
+
+        .slider__bullets{
+            padding-left: 79px;
         }
     }
 
@@ -376,6 +407,8 @@ body{
         max-width: 50vw;
 
         @include slider();
+
+        width: 100%;
 
         img{
             width: 100%;
@@ -772,5 +805,346 @@ body{
         flex: 0 1 50%;
 
         background: url("../img/how_find/map.png") no-repeat center;
+    }
+}
+
+@media screen and (max-width: 1650px) {
+    .left_line{
+        left: 60px;
+    }
+    
+    .right_line{
+        right: 60px;
+    }
+
+    .welcome{
+        .welcome__main{
+            padding-left: 120px;
+        }
+
+        .welcome__services{
+            padding-right: 55px;
+        }
+        
+    }
+
+    .restaurant{
+        padding: 170px 20px 135px 0px;
+        &__slider{
+            .slider__bullets{
+                padding-left: 59px;
+            }
+        }
+    }
+
+    .events{
+        padding: 170px 0px 135px 120px;
+    }
+
+    .intro{
+        .offer{
+            padding-left: 37px;
+        }
+    }
+
+    .residence{
+        .cutter{
+            left: calc(50% - 150px * 2);
+            bottom: -5px;
+            z-index: -1;
+            img{
+                max-width: 150px;
+                
+            }
+        } 
+
+        &__slider{
+            .slider__bullets{
+                margin-left: 0;
+                padding-left: 53px;
+            }
+        }
+    }
+
+    .perks{
+        padding: 170px 0px 135px 120px;
+
+        &__info{
+            padding-left: 0px;
+        }
+    }
+
+    .how_can_find{
+        &__info{
+            .info__content{
+                padding: 40px 30px 94px 120px;
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width: 1480px) {
+    .left_line{
+        left: 40px;
+    }
+    
+    .right_line{
+        right: 40px;
+    }
+
+    .intro{
+        .offer{
+            padding-left: 15px;
+
+            .offer__info{
+                margin-left: 40px;
+
+                .info__suptitle{
+                    font-size: 38px;
+                    margin-bottom: 5px;
+                    line-height: 46px;
+                    font-weight: normal;
+                }
+                .info__title{
+                    font-size: 56px;
+                    line-height: 74px;
+                    margin-bottom: 35px;
+                    margin-top: 15px;
+                }
+            } 
+        }             
+    }
+
+    .welcome{
+
+        padding-top: 100px;
+
+        flex-wrap: wrap;
+        .welcome__main {
+            padding-left: 0;
+            flex: 0 1 100%;
+            text-align: center;
+
+            .main__title{
+                margin-bottom: 20px;
+            }
+            
+            .main__text {
+                max-width: 600px;   
+                margin: 0 auto;    
+            }
+        }
+        .welcome__services{
+            flex: 0 1 80%;
+            margin: 0 auto;
+            justify-content: center;
+            .services__item{
+                text-align: center;
+                
+            }
+        }
+    }
+
+    .restaurant{
+        padding: 170px 0px 135px 0px;
+
+        &__slider{
+            .slider__bullets{
+                padding-left: 40px;
+            }
+        }
+    }
+    
+
+    .events{
+        padding: 170px 0px 135px 90px;
+    }
+
+    
+    .residence{
+        padding: 100px 35px 106px 0px;
+
+        &__slider{
+            .slider__bullets{
+                margin-left: 0;
+                padding-left: 53px;
+            }
+        }
+    }
+
+    .perks{
+        padding-left: 90px;
+
+        &__info{
+            padding-left: 0px;
+        }
+    }
+
+    .how_can_find{
+        &__info{
+            .info__content{
+                padding: 40px 30px 94px 90px;
+
+                .info__title{
+                    margin-top: 40px;
+                }
+
+                img{
+                    max-width: 400px;
+                }
+            }
+        }
+        
+    }
+}
+
+@media screen and (max-width: 1300px ) {
+    .left_line{
+        left: 20px;
+    }
+    
+    .right_line{
+        right: 20px;
+    }
+
+    .intro{
+        .offer{
+            padding-right: 20px;
+            padding-left: 2px;
+            
+            .offer__info{
+                .info__suptitle{
+                    font-size: 36px;
+                }
+                .info__title{
+                    font-size: 50px;
+                    margin-bottom: 25px;
+                }
+
+                .info__text{
+                    font-size: 22px;
+                }
+            } 
+        }             
+    }
+
+    .welcome{
+        padding-top: 90px;
+
+        flex-wrap: wrap;
+        .welcome__main {
+            padding-left: 0;
+            flex: 0 1 100%;
+            text-align: center;
+
+            .main__title{
+                margin-bottom: 20px;
+            }
+            
+            .main__text {
+                max-width: 600px;   
+                margin: 0 auto;    
+            }
+        }
+        .welcome__services{
+            flex: 0 1 80%;
+            margin: 0 auto;
+            justify-content: center;
+            .services__item{
+                text-align: center;
+                
+            }
+        }
+    }
+
+    .restaurant{
+        padding: 100px 0px 100px 0px;
+
+        &__slider{
+            .slider__bullets{
+                padding-left: 40px;
+            }
+        }
+    }
+    
+
+    .events{
+        padding: 100px 0px 100px 40px;
+    }
+
+    .residence{
+        padding: 100px 35px 106px 0px;
+
+        &__slider{
+            .slider__bullets{
+                margin-left: 0;
+                padding-left: 53px;
+            }
+        }
+    }
+    
+    .perks{
+        padding-left: 40px;
+    }
+
+    .how_can_find{
+        &__info{
+            .info__content{
+                padding: 40px 30px 94px 60px;
+
+                .info__title{
+                    margin-top: 40px;
+                }
+
+                img{
+                    max-width: 400px;
+                }
+            }
+        }
+        
+    }
+}
+
+@media screen and (max-width: 1150px){
+    .events{
+
+        &__slider {
+            flex: 0 1 50%;
+            max-width: 50vw;
+    
+            @include slider();
+    
+            width: auto;
+    
+            .slider__slide{
+                width: 100% !important;
+            }
+
+            img{
+                width: 100%;
+                max-height: 100%;
+            }
+        }
+    }
+
+    .residence{
+        padding-right: 20px;
+        &__info{
+            padding-left: 10px;
+            .info__events{
+                flex-wrap: wrap;
+                .events__item{
+                    flex: 0 1 50%;
+                    word-wrap: break-word;
+                }
+            }
+            .info__events-flex-3{
+                flex-wrap: wrap;
+                .events__item{
+                    flex: 0 1 50%;
+                }
+            }
+        }
     }
 }

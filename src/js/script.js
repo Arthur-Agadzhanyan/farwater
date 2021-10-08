@@ -34,8 +34,7 @@ const restaurantSlider = new Swiper(".restaurant-slider",{
     speed: 1000,
     // grabCursor: true,
     slidesPerView: 1,
-    autoHeight: true
-    
+    autoHeight: true,
 })
 
 const eventsSlider = new Swiper(".events-slider",{
@@ -99,8 +98,8 @@ const instagramSlider = new Swiper(".instagram-slider",{
     speed: 1000,
     // grabCursor: true,
     slidesPerView: 5.3,
-    freeMode: true
-    
+    freeMode: true,
+
 })
 
 const anchors = document.querySelectorAll('a[href*="#"]')

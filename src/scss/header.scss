@@ -57,6 +57,89 @@
             font-size: 16px;
         }
     }
+
+    @media screen and (max-width: 1550px) {
+        padding: 18px 60px;
+        justify-content: space-between;
+
+        &__brand {
+            margin-right: 0px;
+        }
+
+        &__nav{
+            margin-right: 0px;
+
+            .nav__item{
+                margin: 0px 13px;
+            }
+        }
+
+        &__contacts{
+            margin-left: 0;
+
+            .contacts__icons {
+                .icons__item{
+                    margin-right: 8px;
+                }
+            }
+    
+            .contacts__phone {
+                margin-right: 22px;
+                margin-left: 5px;
+                font-size: 16px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1300px) {
+        padding: 18px 30px;
+    }
+
+    @media screen and (max-width: 1200px) {
+        &__brand {
+            margin-right: 0px;
+        }
+
+        &__nav{
+            margin-right: 0px;
+
+            .nav__item{
+                font-size: 16px;
+                margin: 0px 10px;
+            }
+        }
+
+        &__contacts{
+            margin-left: 0;
+
+            .contacts__icons {
+                .icons__item{
+                    margin-right: 8px;
+
+                    svg{
+                        height: 22px;
+                    }
+                }
+            }
+    
+            .contacts__phone {
+                margin-right: 22px;
+                margin-left: 5px;
+                font-size: 16px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1100px) {
+        padding: 18px 20px;
+
+        &__nav{
+
+            .nav__item{
+                margin: 0px 6px;
+            }
+        }
+    }
 }
 
 

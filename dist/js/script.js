@@ -112,6 +112,7 @@ const perksSlider = new Swiper(".perks-slider",{
     speed: 1000,
     // grabCursor: true,
     slidesPerView: 1,
+    autoHeight: true
     
 })
 

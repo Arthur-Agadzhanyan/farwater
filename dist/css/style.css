@@ -1489,9 +1489,11 @@ body::-webkit-scrollbar {
 
 .residence__slider {
   position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
   max-width: 50vw;
   z-index: 200;
-  height: 100%;
 }
 
 .residence__slider .slider__slide {
@@ -1547,6 +1549,7 @@ body::-webkit-scrollbar {
 
 .residence__slider img {
   width: 100%;
+  max-height: 100%;
 }
 
 .residence .cutter {
@@ -1812,6 +1815,11 @@ body::-webkit-scrollbar {
   border-bottom-color: rgba(45, 42, 38, 0.2);
 }
 
+.perks__slider img {
+  width: 100%;
+  max-height: 100%;
+}
+
 .news {
   position: relative;
   padding: 90px 80px 144px 80px;
@@ -1937,7 +1945,6 @@ body::-webkit-scrollbar {
   padding: 90px 0px 144px 0px;
   max-width: 100%;
   overflow-x: hidden;
-  background: #ECECEC;
 }
 
 .instagram__info {
@@ -2149,6 +2156,7 @@ body::-webkit-scrollbar {
 }
 
 .instagram__slider .instagram__slide .slide__content {
+  border: 1px solid #E6E9EE;
   background: #fff;
   padding: 17px;
   width: 95%;
@@ -2202,6 +2210,7 @@ body::-webkit-scrollbar {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 50%;
           flex: 0 1 50%;
+  background: #ECECEC;
 }
 
 .how_can_find__info .info__content {

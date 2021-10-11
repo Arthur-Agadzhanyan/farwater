@@ -48,6 +48,30 @@ const defaultSlider = (className) =>{
     }
 }
 
+const headerBtn = document.getElementById("header-mb-menu-btn")
+const mobileMenu = document.getElementById("mb-menu")
+const mobileMenuLinks = document.querySelectorAll(".mb_nav_item")
+
+let isOpen = false
+
+mobileMenuLinks.forEach(el=>{
+    el.addEventListener("click",()=>{
+        mobileMenu.style.top = "-150vh"
+        return isOpen = false
+    })
+})
+
+
+headerBtn.addEventListener("click",()=>{
+    if(isOpen){
+        mobileMenu.style.top = "-150vh"
+        return isOpen = false
+    }else{
+        mobileMenu.style.top = "84px"
+        return isOpen = true
+    }
+})
+
 const introSlider = new Swiper(".intro__slider",{
     pagination:{
         el:".intro__pagination",

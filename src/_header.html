@@ -1,8 +1,8 @@
 <header class="header">
-    <div class="header__brand">
+    <div class="header__brand ">
         <img src="./img/header/logo.png" />
     </div>
-    <div class="header__nav">
+    <div class="header__nav ds">
         <a href="#restaurant" class="nav__item">
             Ресторан
         </a>
@@ -23,7 +23,7 @@
         </a>
     </div>
 
-    <div class="header__contacts">
+    <div class="header__contacts ds">
         <div class="contacts__icons">
             <!-- Facebook -->
             <a class="icons__item">
@@ -71,15 +71,55 @@
             Заказать звонок
         </button>
     </div>
-    <!-- <button class="mb_btn">
+
+    <button id="header-mb-menu-btn" class="mb_btn">
         <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="14" height="1" fill="white"/>
             <rect y="5" width="14" height="1" fill="white"/>
             <rect y="10" width="14" height="1" fill="white"/>
         </svg>
-    </button> -->
+    </button>
 </header>
 
-<nav class="mb_menu">
+<nav id="mb-menu" class="mb_menu">
+    <div class="left_line"></div>
+    <div class="right_line"></div>
+    <div class="middle_line"></div>
 
+    <div class="mb_menu__nav">
+        <a href="#restaurant" class="nav__item mb_nav_item">
+            Ресторан
+        </a>
+        <a href="#residence" class="nav__item mb_nav_item">
+            Вилла
+        </a>
+        <a href="#klub" class="nav__item mb_nav_item">
+            Яхт-клуб
+        </a>
+        <a href="#events" class="nav__item mb_nav_item">
+            Мероприятия
+        </a>
+        <!-- <a href="#news" class="nav__item">
+            Новости
+        </a> -->
+        <a href="#contacts" class="nav__item mb_nav_item">
+            Контакты
+        </a>
+
+        <p class="nav__phone">8 (925) 863 12 21</p>
+    </div>
+
+    <div class="mb_menu__icons">
+        <a href="google.com" class="icons__item">
+            <img src="img/header/mb_icon_1.svg" />
+        </a>
+        <a href="google.com" class="icons__item">
+            <img src="img/header/mb_icon_2.svg" />
+        </a>
+        <a href="google.com" class="icons__item">
+            <img src="img/header/mb_icon_3.svg" />
+        </a>
+    </div>
+
+    <button class="mb_menu__btn">Заказать звонок</button>
 </nav>

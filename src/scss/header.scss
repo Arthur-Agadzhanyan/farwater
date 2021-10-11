@@ -1,4 +1,5 @@
 @import "./variables.scss";
+@import "./mixins.scss";
 
 .header {
     position: sticky;
@@ -12,6 +13,10 @@
 
     font-weight: 600;
     background: #fff;
+
+    .ds{
+        display: flex;
+    }
 
     a{
         text-decoration: none;
@@ -56,6 +61,10 @@
             margin-right: 32px;
             font-size: 16px;
         }
+    }
+
+    .mb_btn{
+        display: none;
     }
 
     @media screen and (max-width: 1550px) {
@@ -140,6 +149,197 @@
             }
         }
     }
+
+    @media screen and (max-width: 1050px) {
+        .mb_btn{
+            display: block;
+            padding: 10px 11px;
+            border: 1px solid $blue;
+            background: $blue;
+            border-radius: 100%;
+        }
+        .ds{
+            display: none;
+        }
+    }
 }
 
+.mb_menu{
+    display: none;
+    position: fixed;
+    top: -150vh;
+    left: 0;
+    right: 0;
+    // bottom: 0;
+    background: #042454;
+    min-height: calc(100vh - 84px);
+    z-index: 999;
+    color: #fff;
 
+    padding: 20px 67px 20px 67px;
+    
+    // display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    transition: all .6s linear;
+
+    .left_line, .middle_line, .right_line{
+        background: #FFFFFF;
+        opacity: .1;
+    }  
+
+    .mb_menu__nav{
+        text-align: center;
+        .nav__item{
+            display: block;
+            text-decoration: none;
+            color: #fff;
+
+            font-weight: 500;
+            font-size: 30px;
+
+            margin-bottom: 23px;
+
+            transition: .2s linear;
+            padding-bottom: 2px;
+
+            border-bottom: 1px solid transparent;
+
+            &:hover{
+                
+                border-bottom: 1px solid #fff;
+            }
+        }
+
+        .nav__phone{
+            display: block;
+            text-decoration: none;
+            color: #fff;
+
+            font-weight: 500;
+            font-size: 25px;
+
+            margin-top: 5px;
+            margin-bottom: 34px;
+            opacity: 0.8;
+        }
+    }
+
+    .mb_menu__icons{
+        .icons__item{
+            margin: 0px 20px;
+            text-decoration: none;
+        }
+    }
+
+    .mb_menu__btn{
+        margin-top: 30px;
+
+        @include button(#fff,$blue,16px);
+    }
+
+    @media screen and (max-width: 1050px){
+        display: flex;
+    }
+
+    @media screen and (max-width: 450px) {
+        .mb_menu__nav{
+            text-align: center;
+            .nav__item{
+                display: block;
+                text-decoration: none;
+                color: #fff;
+    
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 27px;
+    
+                margin-bottom: 18px;
+            }
+    
+            .nav__phone{
+                display: block;
+                text-decoration: none;
+                color: #fff;
+    
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 18px;
+    
+                margin-top: 5px;
+                margin-bottom: 34px;
+                opacity: 0.8;
+            }
+        }
+
+        .mb_menu__icons{
+            .icons__item{
+                margin: 0px 15px;
+                text-decoration: none;
+            }
+        }
+    }
+
+    @media screen and (max-height: 595px) {
+        .mb_menu__nav{
+            text-align: center;
+            .nav__item{
+                display: block;
+                text-decoration: none;
+                color: #fff;
+    
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 27px;
+    
+                margin-bottom: 18px;
+            }
+    
+            .nav__phone{
+                display: block;
+                text-decoration: none;
+                color: #fff;
+    
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 18px;
+    
+                margin-top: 5px;
+                margin-bottom: 34px;
+                opacity: 0.8;
+            }
+        }
+
+        .mb_menu__icons{
+            .icons__item{
+                margin: 0px 15px;
+                text-decoration: none;
+            }
+        }
+    }
+
+    @media screen and (max-height: 500px) {
+        .mb_menu__nav{
+            text-align: center;
+            .nav__item{
+                font-size: 18px;
+                margin-bottom: 8px;
+            }
+            .nav__phone{
+                font-size: 14px;
+
+                margin-top: 0px;
+                margin-bottom: 20px;
+            }
+        }
+
+        .mb_menu__icons{
+            .icons__item{
+                margin: 0px 15px;
+                text-decoration: none;
+            }
+        }
+    }
+}

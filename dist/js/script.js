@@ -31,6 +31,23 @@ function testWebP(callback) {
  //# sourceMappingURL=swiper-bundle.min.js.map;
 
 
+const defaultSlider = (className) =>{
+    return {
+        pagination:{
+            el:className,
+            clickable: true,
+        },
+        loop: true,
+    
+        autoplay:{
+            delay: 5000,
+        },
+        speed: 1000,
+        // grabCursor: true,
+        slidesPerView: 1,
+    }
+}
+
 const introSlider = new Swiper(".intro__slider",{
     pagination:{
         el:".intro__pagination",
@@ -50,69 +67,40 @@ const introSlider = new Swiper(".intro__slider",{
     
 })
 
-const restaurantSlider = new Swiper(".restaurant-slider",{
-    pagination:{
-        el:".restaurant-bullets",
-        clickable: true,
-    },
-    loop: true,
+const restaurantSlider = new Swiper(".restaurant-slider", {
+    ...defaultSlider(".restaurant-bullets"),
+    autoHeight: true,
 
-    autoplay:{
-        delay: 5000,
-    },
-    speed: 1000,
-    // grabCursor: true,
-    slidesPerView: 1,
+})
+const restaurantMobileSlider = new Swiper(".restaurant-mb-slider", {
+    ...defaultSlider(".restaurant-mb-bullets"),
     autoHeight: true,
 })
 
 const eventsSlider = new Swiper(".events-slider",{
-    pagination:{
-        el:".events-bullets",
-        clickable: true,
-    },
-    loop: true,
+    ...defaultSlider(".events-bullets") 
+})
 
-    autoplay:{
-        delay: 5000,
-    },
-    speed: 1000,
-    // grabCursor: true,
-    slidesPerView: 1,
-    
+const eventsMobileSlider = new Swiper(".events-mb-slider",{
+    ...defaultSlider(".events-mb-bullets") 
 })
 
 const residenceSlider = new Swiper(".residence-slider",{
-    pagination:{
-        el:".residence-bullets",
-        clickable: true,
-    },
-    loop: true,
+    ...defaultSlider(".residence-bullets")
+})
 
-    autoplay:{
-        delay: 5000,
-    },
-    speed: 1000,
-    // grabCursor: true,
-    slidesPerView: 1,
-    
+const residenceMobileSlider = new Swiper(".residence-mb-slider",{
+    ...defaultSlider(".residence-mb-bullets")
 })
 
 const perksSlider = new Swiper(".perks-slider",{
-    pagination:{
-        el:".perks-bullets",
-        clickable: true,
-    },
-    loop: true,
+    ...defaultSlider(".perks-bullets"),
+    autoHeight: true,   
+})
 
-    autoplay:{
-        delay: 5000,
-    },
-    speed: 1000,
-    // grabCursor: true,
-    slidesPerView: 1,
-    autoHeight: true
-    
+const perksMobileSlider = new Swiper(".perks-mb-slider",{
+    ...defaultSlider(".perks-mb-bullets"),
+    autoHeight: true,   
 })
 
 const instagramSlider = new Swiper(".instagram-slider",{
@@ -125,10 +113,23 @@ const instagramSlider = new Swiper(".instagram-slider",{
         delay: 5000,
     },
     speed: 1000,
-    // grabCursor: true,
-    slidesPerView: 5.3,
+    // grabCursor: true,  
     freeMode: true,
 
+    breakpoints:{
+        320:{
+            slidesPerView: 1.2,
+        },
+        420:{
+            slidesPerView: 2.3,
+        },
+        800:{
+            slidesPerView: 3.3,
+        },
+        1200:{
+            slidesPerView: 5.3,
+        }
+    }
 })
 
 const anchors = document.querySelectorAll('a[href*="#"]')

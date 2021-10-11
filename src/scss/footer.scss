@@ -87,6 +87,10 @@
         }   
     }
 
+    .mobile{
+        display: none;
+    }
+
     @media screen and (max-width: 1350px) {
         padding: 25px 20px 30px 20px;
 
@@ -149,6 +153,159 @@
                 display: flex;
                 a{
                     margin: 0px 14px;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 900px){
+        .top__footer{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            padding-bottom: 26px;
+    
+            border-bottom: 1px solid #EFF3F3;
+    
+            .footer__logo{
+                width: 260px;
+                order: 1;
+            }
+    
+            .top__nav{
+                display: flex;
+                order: 3;
+
+                justify-content: space-between;
+
+                max-width: 80vw;
+                width: 100%;
+
+                a{
+                    margin: 0px;
+                }
+            }
+    
+            .top__contacts{
+                order: 2;
+                text-align: right;
+                text-align: center;
+    
+                .contacts__phone{
+                    margin-top: 10px;
+                }
+    
+                .contacts__email{
+                    font-weight: 300;
+                    font-size: 16px;
+                    line-height: 21px;
+                    color: #2D2A26;
+                    margin-top: 5px;
+                    margin-bottom: 21px;
+                }
+            }  
+        }
+    }
+
+    @media screen and (max-width: 650px){
+        .top__footer{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            padding-bottom: 0px;
+
+            border-bottom: none;
+    
+            .footer__logo{
+                width: 260px;
+                order: 1;
+            }
+    
+            .top__nav{
+                display: flex;
+                order: 3;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                max-width: 80vw;
+                width: 100%;
+
+                a{
+                    margin: 0px;
+                    font-weight: 450;
+                    font-size: 21px; //*********************
+                    margin-bottom: 14px;
+                }
+            }
+    
+            .top__contacts{
+                order: 2;
+                text-align: right;
+                text-align: center;
+    
+                .contacts__phone{
+                    margin-top: 10px;
+                    font-size: 24px; // ******************************
+                    line-height: 23px;
+                }
+    
+                .contacts__email{
+                    font-weight: 300;
+                    font-size: 18px; // ********************
+                    line-height: 18px;
+                    color: #2D2A26;
+                    margin-top: 8px;
+                    margin-bottom: 21px;
+                }
+            }  
+        }
+
+        .bottom__footer{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+
+            .bottom__text{
+                order: 2;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+
+                span{
+                    margin-bottom: 8px;
+
+                }
+            }
+
+            .mobile{
+                display: block;
+            }
+
+            .bottom__icons{
+                order: 1;
+                max-width: 30vw;
+                width: 100%;
+                margin-bottom: 32px;
+
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+
+                svg{
+                    margin-right: 0px;
+                    
+                }
+            }
+
+            .bottom__digital{
+                order: 3;
+                margin-top: 40px;
+
+                .digital__icon{
+                    // width: 80vw;
                 }
             }
         }

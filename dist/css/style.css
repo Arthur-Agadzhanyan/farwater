@@ -4817,6 +4817,7 @@ body::-webkit-scrollbar {
 
   .restaurant__slider .slider__bullets {
     text-align: center;
+    padding-left: 37px;
   }
 
   .events {
@@ -4913,6 +4914,7 @@ body::-webkit-scrollbar {
 
   .events__slider .slider__bullets {
     text-align: center;
+    padding-left: 37px;
   }
 
   .residence {
@@ -4927,6 +4929,11 @@ body::-webkit-scrollbar {
 
   .residence__slider {
     max-width: 100vw;
+  }
+
+  .residence__slider .slider__bullets {
+    text-align: center;
+    padding-left: 37px;
   }
 
   .residence .cutter {
@@ -4944,6 +4951,11 @@ body::-webkit-scrollbar {
 
   .perks__slider {
     max-width: 100vw;
+  }
+
+  .perks__slider .slider__bullets {
+    text-align: center;
+    padding-left: 37px;
   }
 
   .instagram {
@@ -5000,12 +5012,9 @@ body::-webkit-scrollbar {
     margin: 0 auto;
   }
 
-  .no-webp .how_can_find .how_can_find__img {
-    background: url("../img/how_find/mb_map.png") center no-repeat; }
-
   .how_can_find .how_can_find__img {
     width: 100%;
-    min-height: 314px;
+    min-height: 400px;
   }
 }
 
@@ -5040,6 +5049,38 @@ body::-webkit-scrollbar {
   .events__slider .slider__bullets .swiper-pagination-bullet-active::before {
     width: 23px;
     height: 23px;
+  }
+}
+
+@media screen and (max-width: 450px) and (min-height: 700px) {
+  .intro {
+    max-height: 600px;
+    overflow: hidden;
+  }
+
+  .intro__slider {
+    max-height: calc(95vh - 48px);
+  }
+
+  .intro__slider .intro__slide {
+    min-height: calc(95vh - 48px);
+  }
+
+  .intro__slider .intro__slide img {
+    width: 100%;
+  }
+
+  .intro .offer {
+    max-height: calc(95vh - 48px);
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .no-webp .how_can_find__img {
+    background: url("../img/how_find/mb_map.png") center no-repeat; }
+  .how_can_find__img {
+    width: 100%;
+    min-height: 314px;
   }
 }
 
@@ -5098,28 +5139,6 @@ body::-webkit-scrollbar {
   }
 }
 
-@media screen and (max-height: 728px) {
-  .intro {
-    max-height: 600px;
-  }
-
-  .intro__slider {
-    max-height: calc(95vh - 48px);
-  }
-
-  .intro__slider .intro__slide {
-    min-height: calc(95vh - 48px);
-  }
-
-  .intro__slider .intro__slide img {
-    width: 100%;
-  }
-
-  .intro .offer {
-    max-height: calc(95vh - 48px);
-  }
-}
-
 @media screen and (max-height: 600px) {
   .intro {
     max-height: 600px;
@@ -5148,7 +5167,7 @@ body::-webkit-scrollbar {
 
 .webp .how_can_find__img { background: url(../img/how_find/map.webp) no-repeat center; }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 320px) {
 
-  .webp .how_can_find .how_can_find__img { background: url(../img/how_find/mb_map.webp) center no-repeat; }
+  .webp .how_can_find__img { background: url(../img/how_find/mb_map.webp) center no-repeat; }
 }

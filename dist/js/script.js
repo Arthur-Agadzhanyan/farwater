@@ -142,7 +142,7 @@ const instagramSlider = new Swiper(".instagram-slider",{
 
     breakpoints:{
         320:{
-            slidesPerView: 1.2,
+            slidesPerView: 1.4,
         },
         420:{
             slidesPerView: 2.3,

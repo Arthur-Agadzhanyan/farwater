@@ -1815,6 +1815,7 @@ body{
 
             .slider__bullets{
                 text-align: center;
+                padding-left: 37px;
             }
         }
     }
@@ -1867,6 +1868,7 @@ body{
 
             .slider__bullets{
                 text-align: center;
+                padding-left: 37px;
             }
         }
     }
@@ -1882,6 +1884,11 @@ body{
 
         &__slider {
             max-width: 100vw;
+
+            .slider__bullets{
+                text-align: center;
+                padding-left: 37px;
+            }
         }
 
         .cutter{
@@ -1899,6 +1906,11 @@ body{
 
         &__slider {
             max-width: 100vw;
+
+            .slider__bullets{
+                text-align: center;
+                padding-left: 37px;
+            }
         }
     }
 
@@ -1955,31 +1967,21 @@ body{
         }
         .how_can_find__img{
             width: 100%;
-            background: url("../img/how_find/mb_map.png") center no-repeat;
-            min-height: 314px;
+            // background: url("../img/how_find/mb_map.png") center no-repeat;
+            min-height: 400px;
         }
     }
 }
 
-@media screen and (max-height: 728px){
-    .intro{
-        max-height: 600px;
-        &__slider{
-            max-height: calc(95vh - 48px);
-
-            .intro__slide{
-                min-height: calc(95vh - 48px);
-                img{
-                    width: 100%;
-                }
-            }
-        }
-
-        .offer{
-            max-height: calc(95vh - 48px);
-        }
+@media screen and (max-width: 320px) {
+    .how_can_find__img{
+        width: 100%;
+        background: url("../img/how_find/mb_map.png") center no-repeat;
+        min-height: 314px;
     }
 }
+
+
 
 @media screen and (max-height: 600px){
     .intro{
@@ -2005,3 +2007,23 @@ body{
     .welcome{}
 }
 
+@media screen and (max-width: 450px) and (min-height: 700px){
+    .intro{
+        max-height: 600px;
+        overflow: hidden;
+        &__slider{
+            max-height: calc(95vh - 48px);
+
+            .intro__slide{
+                min-height: calc(95vh - 48px);
+                img{
+                    width: 100%;
+                }
+            }
+        }
+
+        .offer{
+            max-height: calc(95vh - 48px);
+        }
+    }
+}

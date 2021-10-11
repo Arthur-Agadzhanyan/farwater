@@ -310,4 +310,29 @@
             }
         }
     }
+
+    @media screen and (max-width: 450px) {
+        .top__footer{
+            .footer__logo{
+                width: 166px;
+            }
+        }
+        .bottom__footer {
+            .bottom__icons{
+                order: 1;
+                max-width: 50vw;
+                width: 100%;
+                margin-bottom: 32px;
+
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+
+                svg{
+                    margin-right: 0px;
+                    width: 26px;
+                }
+            }
+        }  
+    }
 }

@@ -1926,20 +1926,29 @@ body{
     }
 
     .how_can_find{
+
         &__info{
             .info__content{
+                padding: 5px 16px 32px 16px;
                 .info__title{
                     font-weight: bold;
                     font-size: 22px;
                     line-height: 28px;
+                    margin-bottom: 12px;
                 }
 
                 .info__location{
+                    margin-bottom: 16px;
                     .location__text{
                         font-weight: 600;
                         font-size: 16px;
                         line-height: 21px;
                     }
+                }
+
+                .info__btn{
+                    width: 100%;
+                    margin: 0 auto;
                 }
             }
             

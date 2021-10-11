@@ -4200,6 +4200,32 @@ body::-webkit-scrollbar {
 }
 
 @media screen and (max-width: 450px) {
+  .footer .top__footer .footer__logo {
+    width: 166px;
+  }
+
+  .footer .bottom__footer .bottom__icons {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    max-width: 50vw;
+    width: 100%;
+    margin-bottom: 32px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+
+  .footer .bottom__footer .bottom__icons svg {
+    margin-right: 0px;
+    width: 26px;
+  }
+
   .blue_btn {
     font-size: 14px;
   }
@@ -4795,16 +4821,30 @@ body::-webkit-scrollbar {
     margin-left: 16px;
   }
 
+  .how_can_find__info .info__content {
+    padding: 5px 16px 32px 16px;
+  }
+
   .how_can_find__info .info__content .info__title {
     font-weight: bold;
     font-size: 22px;
     line-height: 28px;
+    margin-bottom: 12px;
+  }
+
+  .how_can_find__info .info__content .info__location {
+    margin-bottom: 16px;
   }
 
   .how_can_find__info .info__content .info__location .location__text {
     font-weight: 600;
     font-size: 16px;
     line-height: 21px;
+  }
+
+  .how_can_find__info .info__content .info__btn {
+    width: 100%;
+    margin: 0 auto;
   }
 
   .no-webp .how_can_find .how_can_find__img {

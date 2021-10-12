@@ -1,0 +1,260 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+.close{
+    position: absolute;
+    top: 32px;
+    right: 32px;
+
+    cursor: pointer;
+}
+
+.modal_bell{
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1001;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+
+    transition: all .2s linear;
+    opacity: 0;
+
+    .overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 200;
+        background: rgba(0,0,0,.4);
+    }
+    .content{
+        position: relative;
+        z-index: 300;
+
+        max-width: 1000px;
+        padding: 73px 15px 60px 15px;
+        width: 100%;
+        background: #fff;
+
+        text-align: center;
+
+        &__title{
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 46px;
+            color: #2D2A26;
+            margin-bottom: 8px;
+            
+        }
+
+        &__text{
+            font-weight: 450;
+            font-size: 20px;
+            line-height: 26px;
+
+            max-width: 356px;
+            margin: 0 auto;
+            color: rgba(45, 42, 38, .8);
+        }
+
+        &__form{
+            margin-top: 23px;
+            .form__input{
+                display: block;
+                max-width: 300px;
+                width: 100%;
+
+                font-weight: normal;
+                font-size: 18px;
+
+                padding: 13px 0px;
+                border: 0;
+                border-bottom: 1px solid rgba(4, 36, 84, .3);
+                outline: none;
+
+                margin: 0 auto;
+                margin-bottom: 18px;
+            }
+            .form__btn{
+                @include button($blue,#fff,18px);
+                max-width: 300px;
+                width: 100%;
+                margin-top: 30px;
+                margin-bottom: 48px;
+            }
+        }
+
+        
+
+        &__phone{
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 31px;
+        }
+
+        @media screen and (max-width: 450px) {
+            &__title{
+                font-weight: 600;
+                font-size: 29px;
+                line-height: 28px;
+                margin-bottom: 12px;
+            }
+
+            &__text{
+                font-weight: 450;
+                font-size: 16px;
+                line-height: 18px;
+            }
+
+            &__form{
+                margin-top: 16px;
+
+                .form__btn{
+                    @include button($blue,#fff,18px);
+                    margin-top: 24px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+    }
+
+    @media screen and (max-width: 450px) {
+        .overlay{
+            background: #fff;
+            user-select: none;
+        }
+    }
+}
+
+.modal__thanks{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1001;
+
+    align-items: center;
+    justify-content: center;
+    // display: none;
+
+    transition: all .2s linear;
+    // opacity: 0;
+
+    .overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 200;
+        background: rgba(0,0,0,.4);
+    }
+    .content{
+        position: relative;
+        z-index: 300;
+
+        max-width: 1000px;
+        padding: 73px 15px 60px 15px;
+        width: 100%;
+        background: #fff;
+
+        text-align: center;
+
+        &__title{
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 46px;
+            color: #2D2A26;
+            margin-bottom: 8px;
+            
+        }
+
+        &__text{
+            font-weight: 450;
+            font-size: 20px;
+            line-height: 26px;
+
+            max-width: 356px;
+            margin: 0 auto;
+            color: rgba(45, 42, 38, .8);
+        }
+
+        &__form{
+            margin-top: 23px;
+            .form__input{
+                display: block;
+                max-width: 300px;
+                width: 100%;
+
+                font-weight: normal;
+                font-size: 18px;
+
+                padding: 13px 0px;
+                border: 0;
+                border-bottom: 1px solid rgba(4, 36, 84, .3);
+                outline: none;
+
+                margin: 0 auto;
+                margin-bottom: 18px;
+            }
+            .form__btn{
+                @include button($blue,#fff,18px);
+                max-width: 300px;
+                width: 100%;
+                margin-top: 30px;
+                margin-bottom: 48px;
+            }
+        }
+
+        
+
+        &__phone{
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 31px;
+        }
+
+        @media screen and (max-width: 450px) {
+            &__title{
+                font-weight: 600;
+                font-size: 29px;
+                line-height: 28px;
+                margin-bottom: 12px;
+            }
+
+            &__text{
+                font-weight: 450;
+                font-size: 16px;
+                line-height: 18px;
+            }
+
+            &__form{
+                margin-top: 16px;
+
+                .form__btn{
+                    @include button($blue,#fff,18px);
+                    margin-top: 24px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+    }
+
+    @media screen and (max-width: 450px) {
+        .overlay{
+            background: #fff;
+            user-select: none;
+        }
+    }
+}

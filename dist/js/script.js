@@ -72,6 +72,30 @@ headerBtn.addEventListener("click",()=>{
     }
 })
 
+const bellModal = document.querySelector(".modal_bell")
+const bellBtns = document.querySelectorAll(".bell_btn")
+let showBellModal = false
+
+bellBtns.forEach(el=>{
+    el.addEventListener("click",()=>{
+        bellModal.style.display = "flex"
+        document.body.style.overflow = "hidden"
+        setTimeout(()=>bellModal.style.opacity = "1",100)
+        return
+    })
+})
+
+const closeModals = document.querySelectorAll(".close_modal")
+
+closeModals.forEach(el=>{
+    el.addEventListener("click",()=>{
+        bellModal.style.opacity = "0"
+        document.body.style.overflow = "auto"
+        setTimeout(()=>bellModal.style.display = "none",300)
+        return
+    })
+})
+
 const introSlider = new Swiper(".intro__slider",{
     pagination:{
         el:".intro__pagination",

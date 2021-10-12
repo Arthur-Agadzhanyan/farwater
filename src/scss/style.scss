@@ -14,6 +14,7 @@
 @import "./header.scss";
 @import "./footer.scss";
 @import "./mixins.scss";
+@import "./animations.scss";
 
 // 🕷 
 
@@ -156,12 +157,11 @@ body{
                 opacity: 1;
                 &::before{
                     content: " ";
-                    transition: transform .6s linear;
+                    // transition: all .6s linear;
                     border-radius: 50%;
+                    transform: rotate(405deg);
                 }
-                outline: none;
-
-                
+                outline: none;        
             }
     
             .swiper-pagination-bullet-active{
@@ -173,9 +173,10 @@ body{
                     z-index: 100;
                     width: 100%;
                     height: 100%;
-                    border: 1px solid white;
-                    border-bottom-color: rgba(255, 255, 255, .2);
-                    transform: rotate(405deg);  
+                    animation-name: intro-circle;
+                    animation-duration: 2s;
+                    animation-fill-mode: forwards;
+                    //   
                 }
             }
         }

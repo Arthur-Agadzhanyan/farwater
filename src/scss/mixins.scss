@@ -75,8 +75,11 @@
                 width: 29px;
                 height: 29px;
                 
-                border: 1px solid #2D2A26;
-                border-bottom-color: rgba(45, 42, 38, .2);
+                
+
+                animation-name: slider-circle;
+                animation-duration: 2s;
+                animation-fill-mode: forwards;
 
                 @media screen and (max-width: 550px) {
                     width: 23px;

@@ -72,8 +72,13 @@ headerBtn.addEventListener("click",()=>{
     }
 })
 
+// 1 modal
 const bellModal = document.querySelector(".modal_bell")
 const bellBtns = document.querySelectorAll(".bell_btn")
+
+const thanksBtn = document.getElementById("bell-form")
+
+const modalThanks = document.querySelector(".modal__thanks")
 let showBellModal = false
 
 bellBtns.forEach(el=>{
@@ -85,6 +90,18 @@ bellBtns.forEach(el=>{
     })
 })
 
+thanksBtn.onsubmit = (e)=>{
+    e.preventDefault()
+    bellModal.style.opacity = "0"
+    document.body.style.overflow = "auto"
+    setTimeout(()=>bellModal.style.display = "none",300)
+
+    modalThanks.style.opacity = "1"
+    document.body.style.overflow = "hidden"
+    setTimeout(()=>modalThanks.style.display = "flex",300)
+    return
+}
+
 const closeModals = document.querySelectorAll(".close_modal")
 
 closeModals.forEach(el=>{
@@ -92,9 +109,17 @@ closeModals.forEach(el=>{
         bellModal.style.opacity = "0"
         document.body.style.overflow = "auto"
         setTimeout(()=>bellModal.style.display = "none",300)
+
+        modalThanks.style.opacity = "0"
+        document.body.style.overflow = "auto"
+        setTimeout(()=>modalThanks.style.display = "none",300)
+
         return
     })
 })
+
+
+
 
 const introSlider = new Swiper(".intro__slider",{
     pagination:{
@@ -114,6 +139,7 @@ const introSlider = new Swiper(".intro__slider",{
     slidesPerView: 1,
     
 })
+
 
 const restaurantSlider = new Swiper(".restaurant-slider", {
     ...defaultSlider(".restaurant-bullets"),

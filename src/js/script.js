@@ -1,6 +1,8 @@
 @@include('webpTest.js');
 @@include('swiper.js');
+@@include("aos.min.js");
 
+AOS.init();
 
 const defaultSlider = (className) =>{
     return {

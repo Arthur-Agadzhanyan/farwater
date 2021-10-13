@@ -220,7 +220,7 @@ body{
 .welcome{
     position: relative;
     
-    
+    overflow-x: hidden;
     min-height: calc(95vh - 48px);
 
     background: $blue;
@@ -238,6 +238,7 @@ body{
     .welcome__main {
         flex: 0 1 32%;
         padding-left: 165px;
+
         .main__img {
             max-width: 538px;
             margin-bottom: 46px;
@@ -309,6 +310,7 @@ body{
 .restaurant{
     position: relative;
     padding: 169px 80px 135px 0px;
+    overflow-x: hidden;
 
     display: flex;
     justify-content: space-between;
@@ -389,6 +391,7 @@ body{
     position: relative;
     padding: 170px 0px 135px 160px;
     background: #ECECEC;
+    overflow-x: hidden;
 
     display: flex;
     justify-content: space-between;
@@ -433,6 +436,7 @@ body{
 .residence{
     position: relative;
     padding: 100px 80px 106px 0px;
+    overflow-x: hidden;
 
     display: flex;
     justify-content: space-between;
@@ -515,6 +519,7 @@ body{
     position: relative;
     padding: 170px 0px 135px 160px;
     background: #ECECEC;
+    overflow-x: hidden;
 
     display: flex;
     justify-content: space-between;
@@ -569,106 +574,6 @@ body{
         img{
             width: 100%;
             max-height: 100%;
-        }
-    }
-}
-
-.news{
-    position: relative;
-    padding: 90px 80px 144px 80px;
-
-    .left_line, .middle_line, .right_line{
-        background: #042454;
-        opacity: .1;
-    }  
-
-    .waves_container{
-        max-width: 535px;
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    .news__title{
-        color: rgba(45, 42, 38, 1);
-        margin: 6px 0px 54px 80px;
-
-        font-weight: bold;
-        font-size: 48px;
-        line-height: 62px;
-    }
-
-    .news__more_btn{
-        @include button(#fff,#2D2A26,18px);
-
-        border: 1px solid #042454;
-        margin-top: 70px;
-        margin-left: 80px;
-
-        &:hover{
-            background: #042454;
-            color: #fff;
-        }
-    }
-
-    .news__list{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        margin-right: 24px;
-
-        .list__item{
-            flex: 0 1 24%;
-
-            .item__img {
-                position: relative;
-                width: 100%;
-                img{
-                    width: 95%;
-                }
-            }
-    
-            .item__date {
-                position: absolute;
-                bottom: -13px;
-                left: 0;
-                z-index: 2;
-                font-weight: 450;
-                font-size: 16px;
-                line-height: 21px;
-
-                letter-spacing: 0.12em;
-                color: #fff;
-
-                padding: 8px 16px 6px 16px;
-                background: #042454;
-
-            }
-    
-            .item__title {
-                font-weight: 600;
-                font-size: 20px;
-                line-height: 26px;
-                margin-top: 26px;
-                margin-bottom: 8px;
-                margin: 26px 0px 8px 16px;
-            }
-    
-            .item__text {
-                margin: 8px 0px 8px 16px; 
-            }
-
-            
-        }  
-    }
-    .bg_imgs{
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        z-index: 1;
-
-        display: flex;
-        img{
-            max-height: 220px;
         }
     }
 }

@@ -51,8 +51,8 @@ const bellBtns = document.querySelectorAll(".bell_btn")
 
 const thanksBtn = document.getElementById("bell-form")
 
+//2 modal
 const modalThanks = document.querySelector(".modal__thanks")
-let showBellModal = false
 
 bellBtns.forEach(el=>{
     el.addEventListener("click",()=>{
@@ -75,6 +75,19 @@ thanksBtn.onsubmit = (e)=>{
     return
 }
 
+// news modal
+const modalNews = document.querySelector(".modal__news")
+const newsBtns = document.querySelectorAll(".news_btn")
+
+newsBtns.forEach(el=>{
+    el.addEventListener("click",()=>{
+        modalNews.style.display = "flex"
+        document.body.style.overflow = "hidden"
+        setTimeout(()=>modalNews.style.opacity = "1",100)
+        return
+    })
+})
+
 const closeModals = document.querySelectorAll(".close_modal")
 
 closeModals.forEach(el=>{
@@ -87,12 +100,13 @@ closeModals.forEach(el=>{
         document.body.style.overflow = "auto"
         setTimeout(()=>modalThanks.style.display = "none",300)
 
+        modalNews.style.opacity = "0"
+        document.body.style.overflow = "auto"
+        setTimeout(()=>modalNews.style.display = "none",300)
+
         return
     })
 })
-
-
-
 
 const introSlider = new Swiper(".intro__slider",{
     pagination:{
